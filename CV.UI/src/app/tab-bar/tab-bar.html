@@ -1,0 +1,5 @@
+<div class="tabs flex-row">
+  @for (button of buttons(); track button) {
+    <div class="tab-button full-width" [class.tab-button-active]="tabBarManager.selectedTab() === button" (click)="handleTabClick(button)"><a class="tab-button-content full-width">{{button.name}}</a></div>
+  }
+</div>

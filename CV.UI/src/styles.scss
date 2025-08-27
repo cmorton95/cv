@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --bg: rgb(0, 0, 0);
+    --bg-accent-raw: 31, 31, 47;
+    --bg-accent: rgb(var(--bg-accent-raw));
+    --fg: white;
+    --fg-accent: white;
+    --accent-raw: 90, 24, 186;
+    --accent: rgb(var(--accent-raw));
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, var(--bg), var(--bg-accent));
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.flex {
+    flex: 0 0 auto;
+}
+
+.flex-g {
+    flex: 1 0 auto;
+}
+
+.flex-s {
+    flex: 0 1 auto;
+}
+
+.flex-gs {
+    flex: 1 1 auto;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
