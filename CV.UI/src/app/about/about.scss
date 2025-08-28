@@ -43,8 +43,7 @@
 .hobby-container:hover {
     --container-first: var(--bg-accent);
     --container-second: var(--accent);
-    transform: scale(1.03);
-    font-size: large;
+    transform: scale(1.05);
 }
 
 .hobby-image {
