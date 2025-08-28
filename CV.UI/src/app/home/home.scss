@@ -1,3 +1,114 @@
+@property --container-first {
+    syntax: '<color>';
+    initial-value: #00000000;
+    inherits: false;
+}
+
+@property --container-second {
+    syntax: '<color>';
+    initial-value: #00000000;
+    inherits: false;
+}
+
 .main {
-    padding: 3em;
+    padding: 0 3rem 3rem 3rem;
+}
+
+.container {
+    max-width: 55rem;
+}
+
+.work-container {
+    height: 8rem;
+    max-width: 70rem;
+    margin: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 2px solid var(--accent);
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--container-first), var(--container-second));
+    transition: transform ease-in-out 0.2s, --container-first 0.5s, --container-second 0.5s;
+}
+
+.work-container:hover {
+    --container-first: var(--bg-accent);
+    --container-second: var(--accent);
+    transform: scale(1.03);
+}
+
+.description-container {
+    max-width: 50rem;
+}
+
+.skills-container {
+    width: 50rem;
+}
+
+.skill-container {
+    width: 10rem;
+    height: 4rem;
+    margin: 1rem;
+    padding: 1rem;
+    border-bottom: 2px solid var(--accent);
+    border-radius: 8px;
+    opacity: 1;
+    transform: translateX(0);
+    background: linear-gradient(135deg, var(--container-first), var(--container-second));
+    transition: opacity 0.3s ease, transform 0.3s ease, --container-first 0.2s, --container-second 0.2s;
+}
+
+.skill-container:hover {
+    --container-first: var(--bg-accent);
+    --container-second: var(--accent);
+}
+
+.skill-container.left {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.skill-container.right {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.skills-arrow {
+    height: 2rem;
+    width: 2rem;
+    font-size: xx-large;
+    color: var(--fg);
+    border-radius: 4px;
+    border-bottom: 2px solid var(--accent);
+    background: linear-gradient(180deg, var(--container-first), var(--container-second));
+    transition: --container-first 0.2s, --container-second 0.2s;
+    text-align: center;
+    justify-content: center;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.skills-arrow:hover {
+    --container-first: var(--bg-accent);
+    --container-second: var(--accent);
+}
+
+.qual-container {
+    max-width: 70rem;
+    width: 50rem;
+    border-bottom: 2px solid var(--accent);
+    border-radius: 16px;
+    margin: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--container-first), var(--container-second));
+    transition: transform ease-in-out 0.2s, --container-first 0.5s, --container-second 0.5s;
+}
+
+.qual-container:hover {
+    --container-first: var(--bg-accent);
+    --container-second: var(--accent);
+    transform: scale(1.03);
+}
+
+.timeline {
+    border-left: 4px solid var(--accent);
 }

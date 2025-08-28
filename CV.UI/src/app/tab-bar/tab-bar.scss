@@ -1,20 +1,20 @@
 .tabs {
     height: 3vh;
-    padding: 1em
+    padding: 1rem
 }
 
 .tab-button {
-    width: 10vw;
-    border-radius: 24px;
-    padding: 0.4em;
+    width: 8rem;
+    border-radius: 2px;
+    border-bottom: 2px solid var(--bg-accent);
+    padding: 0.4rem;
     transition: ease-in-out 0.1s;
-    margin-right: 0.2em;
+    margin-right: 0.4rem;
     cursor: pointer;
 }
 
 .tab-button:hover {
-    background-color: rgba(var(--accent-raw), 0.8);
-    box-shadow: 0 0 12px 4px rgba(var(--accent-raw), 0.8);
+    border-bottom: 2px solid var(--accent);
     transition: ease-in-out 0.1s;
 }
 
@@ -26,5 +26,5 @@
 
 .tab-button-active, 
 .tab-button-active:hover {
-    background-color: var(--accent)
+    border-bottom: 2px solid var(--accent);
 }
