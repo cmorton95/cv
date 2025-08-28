@@ -9,7 +9,7 @@
       <div class="timeline"></div>
       <div class="flex-column flex">
         @for (work of workExperience(); track work.name) {
-          <div class="work-container glow-small flex-column flex">
+          <div class="work-container flex-column flex">
             <div class="flex-row flex align-center">
               <h3 class="pr-1">{{work.name}}</h3>
               <a class="pr-1 italic">{{work.startDate | date:'MMM yyyy'}} - {{work.endDate | date:'MMM yyyy'}}</a>
@@ -29,7 +29,7 @@
       </div>
       <div class="skills-container flex-row flex align-center flex-wrap space-between">
         @for (skill of skills(); track skill.name) {
-          <div class="skill-container flex-column align-center glow-small" [class]="skill.state">
+          <div class="skill-container flex-column align-center" [class]="skill.state">
             <a>{{skill.name}}</a>
             <star-rating class="skill-rating" [rating]="skill.rating"/>
           </div>
@@ -44,7 +44,7 @@
     <h2>Qualifications</h2>
     <div class="flex flex-column">
       @for (qual of qualifications(); track qual.name) {
-        <div class="qual-container glow-small">
+        <div class="qual-container">
           <div class="flex flex-row align-center">
             <h3 class="pr-1">{{qual.name}}</h3>
             <a class="italic">{{qual.date | date:'MMM yyyy'}}</a>
