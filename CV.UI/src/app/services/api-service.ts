@@ -3,6 +3,7 @@ import { Observable, of } from 'rxjs';
 import { WorkExperience } from '../models/work-experience';
 import { Skill } from '../models/skill';
 import { Qualification } from '../models/qualification';
+import { Hobby } from '../models/hobby';
 
 @Injectable({
   providedIn: 'root'
@@ -86,15 +87,6 @@ export class ApiService {
   getQualifications(): Observable<Qualification[]> {
     const qualificatons: Qualification[] = [
       { 
-        name: "Microsoft Certified Solutions Developer - App Builder", date: new Date(2019, 4), 
-        topics: [
-          "70-483, Programming in C#.", 
-          "70-486, Developing ASP.NET MVC Web Applications.", 
-          "70-487, Developing Microsoft Azure and Web Services."
-        ],
-        grade: "80%" 
-      },
-      { 
         name: "Computer Science BSc (Hons)", date: new Date(2017, 7),
         topics: [
           "Low-level (C/ASM) programming of safety-critical and real-time systems",
@@ -104,6 +96,15 @@ export class ApiService {
           "Ethical programming."
         ],
         grade: "2-1"
+      },
+      { 
+        name: "Microsoft Certified Solutions Developer - App Builder", date: new Date(2019, 4), 
+        topics: [
+          "70-483, Programming in C#.", 
+          "70-486, Developing ASP.NET MVC Web Applications.", 
+          "70-487, Developing Microsoft Azure and Web Services."
+        ],
+        grade: "80%" 
       },
       {
         name: "A-Levels", date: new Date(2013, 7),
@@ -123,5 +124,31 @@ export class ApiService {
       }
     ]; //TODO replace with API call
     return of(qualificatons);
+  }
+
+  getHobbies(): Observable<Hobby[]> {
+    const hobbies: Hobby[] = [
+      { 
+        name: 'Space', 
+        image: 'https://www.nasa.gov/wp-content/uploads/2022/10/stsci-01gfnn3pwjmy4rqxkz585bc4qh.png', 
+        description: "I have a strong fascination with space. For as long as I can remember, it's intrigued me to explore the unknown." 
+      },
+      {
+        name: 'Magic the Gathering',
+        image: 'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781421590509/the-art-of-magic-the-gathering-kaladesh-9781421590509_hr.jpg',
+        description: 'Currently deeply obsessed with collecting fancy cardboard. Playing games of commander with my friends rarely gets old!'
+      },
+      {
+        name: 'Video Games',
+        image: 'https://www.punchtechnology.co.uk/wp-content/uploads/2025/03/P500CWmain.webp',
+        description: "My evergreen passion is, and probably always will be, Video Games. If you ever need to find me, it's fair to assume I'm at my PC."
+      },
+      {
+        name: 'Mountain Biking',
+        image: 'https://off.road.cc/sites/default/files/styles/640body/public/thumbnails/image/2022%20rampage%20riding1.jpg?itok=UKD0MkZT',
+        description: "I love mountain biking, nothing quite clears your mind like rushing down a dirt trail a bit too quickly. Unfortunately I am between bikes at the moment as my bike was stolen, RIP, I'll never forget you. 💔"
+      }
+    ];
+    return of(hobbies);
   }
 }

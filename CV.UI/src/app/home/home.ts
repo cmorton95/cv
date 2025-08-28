@@ -4,7 +4,7 @@ import { WorkExperience } from '../models/work-experience';
 import { Skill } from '../models/skill';
 import { Qualification } from '../models/qualification';
 import { DatePipe } from '@angular/common';
-import { StarRating } from './star-rating/star-rating';
+import { StarRating } from '../star-rating/star-rating';
 
 @Component({
   selector: 'home',

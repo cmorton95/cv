@@ -1,3 +1,11 @@
-<div class="main">
-  
+<div class="main flex-g flex-column">
+  @for (hobby of hobbies(); track hobby.name) {
+    <div class="hobby-container flex-g flex-row space-between">
+      <div class="hobby-description flex-g flex-column">
+        <h3>{{hobby.name}}</h3>
+        <p>{{hobby.description}}</p>
+      </div>
+      <img class="hobby-image" src={{hobby.image}} height="256" width="256" style="object-fit: cover;">
+    </div>
+  }
 </div>

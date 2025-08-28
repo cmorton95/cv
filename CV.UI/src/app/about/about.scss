@@ -1,0 +1,56 @@
+@property --container-first {
+    syntax: '<color>';
+    initial-value: #00000000;
+    inherits: false;
+}
+
+@property --container-second {
+    syntax: '<color>';
+    initial-value: #00000000;
+    inherits: false;
+}
+
+.main {
+    padding: 3rem;
+}
+
+.hobby-container {
+    margin: 0 0 2rem 0;
+    padding: 1.5rem;
+    left: 0;
+    border-bottom: 2px solid var(--accent);
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--container-first), var(--container-second));
+    transition: ease-in-out 0.2s, --container-first 0.5s, --container-second 0.5s;
+}
+
+.hobby-description {
+    max-width: 40rem;
+    margin: 0 1rem;
+}
+
+.hobby-container:nth-child(2n) {
+    flex-direction: row-reverse;
+    right: 0;
+}
+
+.hobby-container:nth-child(2n) > .hobby-description {
+    right: 0;
+    justify-content: right;
+    text-align: right;
+}
+
+.hobby-container:hover {
+    --container-first: var(--bg-accent);
+    --container-second: var(--accent);
+    transform: scale(1.03);
+    font-size: large;
+}
+
+.hobby-image {
+    width: 192px;
+    height: 192px;
+    object-fit: cover;
+    border: 4px solid white;
+    border-radius: 120px;
+}
